@@ -1,0 +1,32 @@
+{
+  "type": "QuantitativeTrack",
+  "trackId": "{sample}.bw",
+  "name": "RNA-seq coverage from {tissue} - {condition} ({sample})",
+  "assemblyNames": [
+    "{assemblyName}"
+  ],
+  "category": [
+    "RNA-seq",
+    "{tissue}",
+    "{condition}"
+  ],
+  "adapter": {
+    "type": "BigWigAdapter",
+    "bigWigLocation": {
+      "locationType": "UriLocation",
+      "uri": "DATA/RNA-seq/{sample}.bw"
+    }
+  },
+  "displays": [
+    {
+      "type": "LinearWiggleDisplay",
+      "displayId": "{sample}-LinearWiggleDisplay",
+      "renderers": {
+        "XYPlotRenderer": {
+          "type": "XYPlotRenderer",
+          "posColor": "rgb(53,100,101,1)"
+        }
+      }
+    }
+  ]
+}

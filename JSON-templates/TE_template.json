@@ -1,0 +1,40 @@
+{
+      "type": "FeatureTrack",
+      "trackId": "{assemblyName}.TE.gff3",
+      "name": "TE annotations ({assemblyName})",
+      "assemblyNames": [
+        "{assemblyName}"
+      ],
+      "description": "TE annotations.",
+      "category": [
+        "Genome annotations"
+      ],
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "locationType": "UriLocation",
+          "uri": "DATA/TE/{assemblyName}.TE.gff3.gz"
+        },
+        "index": {
+          "location": {
+            "locationType": "UriLocation",
+            "uri": "DATA/TE/{assemblyName}.TE.gff3.gz.tbi"
+          }
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "{assemblyName}.TE.gff3-LinearBasicDisplay",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "color1": "#9D1046",
+            "labels": {
+              "name": "jexl:get(feature,'te_id') || get(feature,'id')",
+              "description": "jexl:get(feature,'family') || get(feature,'description')",
+              "descriptionColor": "#9D1046"
+            }
+          }
+        }
+      ]
+    }

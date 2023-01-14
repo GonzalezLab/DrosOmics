@@ -1,0 +1,33 @@
+{  "type": "FeatureTrack",
+  "trackId": "{sample}.bigBed",
+  "name": "ChIP-seq peaks of {histone} from {tissue} ({sample})",
+  "assemblyNames": [
+    "{assemblyName}"
+  ],
+  "category": [
+    "ChIP-seq",
+    "{tissue}",
+    "{histone}"
+  ],
+  "adapter": {
+    "type": "BigBedAdapter",
+    "bigBedLocation": {
+      "locationType": "UriLocation",
+      "uri": "DATA/ChIP-seq/{sample}.bigBed"
+    }
+  },
+  "displays": [
+    {
+      "type": "LinearBasicDisplay",
+      "displayId": "{sample}_peak-LinearBasicDisplay",
+      "renderer": {
+        "type": "SvgFeatureRenderer",
+        "color1": "#583114",
+        "displayMode": "compact",
+        "maxFeatureGlyphExpansion": 100,
+        "maxHeight": 100
+      }
+    }
+  ]
+}
+

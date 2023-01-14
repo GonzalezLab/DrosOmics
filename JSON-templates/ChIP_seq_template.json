@@ -1,0 +1,32 @@
+{
+  "type": "QuantitativeTrack",
+  "trackId": "{sample}.bw",
+  "name": "ChIP-seq FC signal of {histone}  from {tissue} ({sample})",
+  "assemblyNames": [
+    "{assemblyName}"
+  ],
+  "category": [
+    "ChIP-seq",
+    "{tissue}",
+    "{histone}"
+  ],
+  "adapter": {
+    "type": "BigWigAdapter",
+    "bigWigLocation": {
+      "locationType": "UriLocation",
+      "uri": "DATA/ChIP-seq/{sample}.bw"
+    }
+  },
+  "displays": [
+    {
+      "type": "LinearWiggleDisplay",
+      "displayId": "{sample}-LinearWiggleDisplay",
+      "renderers": {
+        "XYPlotRenderer": {
+          "type": "XYPlotRenderer",
+          "posColor": "#583114"
+        }
+      }
+    }
+  ]
+}

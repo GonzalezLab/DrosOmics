@@ -1,0 +1,38 @@
+{
+      "type": "FeatureTrack",
+      "trackId": "{assemblyName}.gff3",
+      "name": "Gene annotations ({assemblyName})",
+      "assemblyNames": [
+        "{assemblyName}"
+      ],
+      "description": "Gene annotations transferred from Liftoff.",
+      "category": [
+        "Genome annotations"
+      ],
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "locationType": "UriLocation",
+          "uri": "DATA/GENES/{assemblyName}.gff3.gz"
+        },
+        "index": {
+          "location": {
+            "locationType": "UriLocation",
+            "uri": "DATA/GENES/{assemblyName}.gff3.gz.tbi"
+          }
+        }
+      },
+      "displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "{assemblyName}.gff3-LinearBasicDisplay",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "height": 14,
+            "labels": {
+              "name": "jexl:get(feature,'gene_symbol') || get(feature,'id')"
+            }
+          }
+        }
+      ]
+    }

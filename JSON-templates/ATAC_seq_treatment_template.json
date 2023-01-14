@@ -1,0 +1,36 @@
+{
+  "type": "QuantitativeTrack",
+  "trackId": "{sample}.bw",
+  "name": "ATAC-seq FC signal from {tissue} - {condition} ({sample})",
+  "assemblyNames": [
+    "{assemblyName}"
+  ],
+  "category": [
+    "ATAC-seq",
+    "{tissue}",
+    "{condition}"
+  ],
+  "adapter": {
+    "type": "BigWigAdapter",
+    "bigWigLocation": {
+      "locationType": "UriLocation",
+      "uri": "DATA/ATAC-seq/{sample}.bw"
+    }
+  },
+  "displays": [
+    {
+      "type": "LinearWiggleDisplay",
+      "displayId": "{sample}_signal-LinearWiggleDisplay",
+      "renderers": {
+        "DensityRenderer": {
+          "type": "DensityRenderer",
+          "posColor": "#D48A41"
+        },
+        "XYPlotRenderer": {
+          "type": "XYPlotRenderer",
+          "posColor": "#D48A41"
+        }
+      }
+    }
+  ]
+}
