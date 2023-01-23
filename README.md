@@ -1,5 +1,5 @@
 # DrosOmics
-Scripts to create the DrosOmics genome browser: http://gonzalezlab.eu/drosomics
+Docker image and scripts to run and to create the DrosOmics genome browser: http://gonzalezlab.eu/drosomics
 
 ## Create environment
 `conda create -n jbrowse2`
@@ -13,6 +13,9 @@ Scripts to create the DrosOmics genome browser: http://gonzalezlab.eu/drosomics
 2. `data*tsv`: tab-delimited files with the name of the data uploaded into DrosOmics
 3. `JSON-templates`: templates for DrosOmics to create the different type tracks
 4. `ChIP-seq_scripts` and `RNA-seq_script`: scripts to process ChIP/ATAC/RNA-seq
+
+## Docker image
+The docker image containing DrosOmics is in the `drosomics.tar` file.
 
 ## Citation
 
