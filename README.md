@@ -19,6 +19,4 @@ The docker image containing DrosOmics is in the `drosomics.tar` file.
 
 ## Citation
 
-Coronado-Zamora M, Salces-Ortiz J, González J. 2022. DrosOmics: a comparative genomics browser to explore omics data in natural populations of *D. melanogaster*. BioRxiv:2022.07.22.501088. Available from: https://www.biorxiv.org/content/10.1101/2022.07.22.501088v2
-
-
+Coronado-Zamora M, Salces-Ortiz J, González J. 2023. DrosOmics: a browser to explore -omics variation across high-quality reference genomes from natural populations of Drosophila melanogaster. Mol Biol Evol 40: msad075. 10.1093/molbev/msad075
