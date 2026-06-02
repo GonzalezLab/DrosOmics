@@ -1,5 +1,6 @@
 # DrosOmics
-Docker image and scripts to run and to create the DrosOmics genome browser: http://gonzalezlab.eu/drosomics
+Docker image and scripts to run and to create the DrosOmics genome browser: 
+https://www.biologiaevolutiva.org/gonzalez_lab/drosomics/
 
 ## Create environment
 `conda create -n jbrowse2`
